@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<style>
+			html, body {
+				font-size: 14px;
+			}
+			#wrapper {
+				position: relative;
+			}
+			.content {
+				height: 50px;
+				text-align: center;
+				text-transform: uppercase;
+				line-height: 50px;
+				font-size: 2em;
+				overflow: hidden;
+			}
+			.content.static {
+				background: blue;
+				color: #fff;
+			}
+			.content.relative {
+				position: relative;
+				background: red;
+				color: #fff;
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.content-container {
+				overflow: hidden;
+			}
+			.content-container.relative.vertical {
+				height: 100px;
+				background: green;
+				position: relative;
+			}
+			.content-container.relative.vertical .content {
+				top: 50%;
+				margin-top: -25px;
+			}
+			.content.absolute {
+				position: absolute;
+				background-color: black;
+				color: #fff;
+			}
+			.content.absolute.horizontal {
+				left: 0;
+				right: 0;
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.content-container.absolute {
+				position: relative;
+				height: 50px;
+			}
+			.content-container.absolute.vertical {
+				height: 100px;
+				background: green;
+			}
+			.content-container.absolute.vertical .content {
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 50%;
+				margin: auto;
+			}
+
+			.content.fixed {
+				position: fixed;
+				background-color: orange;
+				color: #fff;
+			}
+			.content-container.fixed.vertical .content {
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 50%;
+				margin: auto;
+			}
+			.content.text.horizontal {
+				line-height: 1;
+				background-color: purple;
+			}
+			.content.text.vertical {
+				height: auto;
+				line-height: 50px;
+				background-color: chocolate;
+				white-space: wrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="content static">Static</div>
+			<div class="content relative">Relative - Horizontal</div>
+			<div class="content-container relative vertical">
+				<div class="content relative vertical">Relative - Horizontal and Vertical</div>
+			</div>
+			<div class="content-container absolute horizontal">
+				<div class="content absolute horizontal">Absolute - Horizontal</div>
+			</div>
+			<div class="content-container absolute horizontal vertical">
+				<div class="content absolute horizontal">Absolute - Horizontal and Vertical</div>
+			</div>
+			<div class="content-container fixed horizontal vertical">
+				<div class="content fixed horizontal">Fixed - Horizontal and Vertical</div>
+			</div>
+			<div class="content text horizontal">Text Horizontal</div>
+			<div class="content text vertical">Text Vertical Text Vertical Text Vertical Text Vertical Text Vertical Text Vertical  Text Vertical</div>
+		</div>	
+	</body>
+</html>
